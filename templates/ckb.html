@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    <a href="/">Home</a>
+</header>
+<body>
+<form action="agg" method="post">
+
+        {% for line in data.fields %}
+        <label for="{{ line }}">
+            <input type="checkbox" name="{{ line }}" value='{{ line }}' id="{{ line }}">{{ line }}
+        </label>
+    <br>
+        {% endfor %}
+        <input type="submit" value="valider">
+    </form>
+</body>
+</html>

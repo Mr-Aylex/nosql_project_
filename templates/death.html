@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<header>
+    <a href="/">Home</a>
+</header>
+<body>
+    <div>
+          {% for key,value in data.items() %}
+        <div>
+              <label for="">{{key}}</label>
+              <input type="text" value="{{value}}" disabled>
+        </div>
+          {% endfor %}
+    </div>
+
+    <div>
+        <img src="../static/img/death_per_country.jpg" alt="">
+    </div>
+
+</body>
+</html>

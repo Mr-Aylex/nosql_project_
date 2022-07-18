@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/death" method="post">
+        <h4>Nombre de mort par entitées</h4>
+        <div>
+            <label for="">Année</label>
+            <select name="year">
+                {% for val in year %}
+                <option value="{{val}}">{{val}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="">pays/zone</label>
+            <select name="country">
+                {% for val in country %}
+                <option value="{{val}}">{{val}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit">
+    </form>
+    <form action="/stats/" method="post">
+        <h4>Nombre de mort par pays</h4>
+        <div>
+            <label for="">pays/zone</label>
+            <select name="country">
+                {% for val in country %}
+                <option value="{{val}}">{{val}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit">
+    </form>
+<form action="/plot" method="post">
+        <h4>Nombre de mort par année par maladie</h4>
+        <div>
+            <label for="">Année</label>
+            <select name="year">
+                {% for val in year %}
+                <option value="{{val}}">{{val}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>
